@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cnh.css">
+    <title>Rideshare</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png" alt="Ícone de Localização"></span>DESHARE <span class="help">Precisa de ajuda?</span></h1>
+    </div>
+    <hr>
+    <h2 class="tema"> Carteira Nacional de Habilitação (CNH) </h2>
+    <p class="subtema"> Insira os dados da sua CNH para continuar </p>
+    <div class="container">
+        <div class="login-box">
+            <input type= "text" placeholder="Número da CNH">
+            <input type= "text" placeholder="Categoria">
+            <input type= "text" placeholder="Data de validade">
+
+            <h4 class="descricao">Agora, inclua uma foto da sua CNH:</h4>
+
+            <div class="btn-arquivo">
+                <button></button>
+            </div>
+
+            <hr class="separator">
+            <div class="btn-continuar-container"> 
+                <h3 class="btn-cadastrar" onclick="continuar()">CONTINUAR</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function continuar() {
+           
+            sessionStorage.setItem('cnhConcluida', 'true');
+      
+            window.location.href = 'cadastromotorista.html';
+        }
+    </script>
+</body>
+</html>
